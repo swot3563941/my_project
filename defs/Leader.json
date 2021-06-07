@@ -1,0 +1,34 @@
+{
+    "name": "Leader",
+    "type": "dynamic",
+    "description": "A Leader Robot",
+    "shape": [
+        { "x": 15, "y": 0 },
+        { "x": 0, "y": 10 },
+        { "x": 0, "y": -10 }
+    ],
+    "friction": {
+        "collision": 1,
+        "linear": 10,
+        "rotational": 700
+    },
+    "sensors": [
+        { 
+            "type": "range",
+            "location": { "x": 12, "y": 0 },
+            "direction": 0
+        },
+        { 
+            "type": "range",
+            "location": { "x": 12, "y": 0 },
+            "direction": 0.5
+        } ,
+        { 
+            "type": "range",
+            "location": { "x": 12, "y": 0 },
+            "direction": -0.5
+        }                        
+    ],
+    "mass": 1,
+    "controller": "lib/Leader.so"
+}
