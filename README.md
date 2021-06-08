@@ -36,10 +36,13 @@ If you want to make the body of bony longer, you can modify the 'config.jason' f
 }, 
 ```
 #### How it looks like
+(1) Bony wandering in the maze
 <img width=90%
      src="https://github.com/swot3563941/my_project/blob/main/images/start.png">
+(2) Bony approaching the goal
 <img width=90%
      src="https://github.com/swot3563941/my_project/blob/main/images/aproaching.png">
+(3) Bony escape the maze
 <img width=90%
      src="https://github.com/swot3563941/my_project/blob/main/images/escape.png">
 ## Key challenges
