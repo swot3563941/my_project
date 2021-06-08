@@ -35,4 +35,7 @@ If you want to make the body of bony longer, you can modify the 'config.jason' f
   }
 }, 
 ```
+#### How it looks like
+<img width=70%
+     src="https://github.com/swot3563941/my_project/blob/main/images/start.png">
 ## Key challenges
