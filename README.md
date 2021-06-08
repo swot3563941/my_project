@@ -33,6 +33,6 @@ If you want to make the body of bony longer, you can modify the 'config.jason' f
                 "y": 100, 
                 "theta": 1
             }
-        }, 
+}, 
 ```
 ## Key challenges
