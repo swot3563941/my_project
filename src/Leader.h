@@ -8,10 +8,12 @@
 namespace {
     int direction = 0;
     using namespace enviro;
-
+    // The movingforard state
     class MovingForward : public State, public AgentInterface {
         public:
+        // Nothing to do in entry
         void entry(const Event& e) {}
+        // Track a given velicity, change state in given conditions
         void during() { 
             track_velocity(4,0);
             if ( sensor_value(1) < 40 ) {
@@ -27,29 +29,40 @@ namespace {
                 emit(Event(tick_name));
             }            
         }
+        // Nothing to do in exit
         void exit(const Event& e) {}
+        // Set the tick name
         void set_tick_name(std::string s) { tick_name = s; }
         std::string tick_name;
     };
 
+    // The rotating state
     class Rotating : public State, public AgentInterface {
         public:
+        // Nothing to do in entry
         void entry(const Event& e) { rate = direction == 0 ? 5 : -5; }
+        // Track some angular velocity, and chage state under some conditions
         void during() { 
             track_velocity(0,rate); 
             if ( sensor_value(0) > 70 ) {
                 emit(Event(tick_name));
             }
         }
+        // Nothing to do in exit
         void exit(const Event& e) {}
-        double rate;
+        // Set tick name
         void set_tick_name(std::string s) { tick_name = s; }
-        std::string tick_name;        
+        std::string tick_name;
+
+        double rate;        
     };
 
+    // The controller of leader class
     class LeaderController : public StateMachine, public AgentInterface {
 
         public:
+
+        // Inherite statemachine, add transitions and state
         LeaderController() : StateMachine() {
 
             set_initial(moving_forward);
@@ -62,7 +75,7 @@ namespace {
             rotating.set_tick_name(tick_name);
 
         }
-
+        // Watch click in the screen
         void init() {
             watch("screen_click", [this](Event e) {
                 teleport(e.value()["x"], e.value()["y"], double(rand()%5-2)/5);
@@ -73,8 +86,7 @@ namespace {
             });
             StateMachine::init();  
         }
-
-        
+        // Keep emiting current position, teleport in some conditions
         void update() {
             //if ( rand() % 100 <= 1 ) {
             //    emit(Event(tick_name));
@@ -109,6 +121,7 @@ namespace {
 
     };
 
+    // Leader class
     class Leader : public Agent {
 
         public:
