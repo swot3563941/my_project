@@ -128,8 +128,8 @@
             }
         },
         {
-            "definition": "defs/block.json",
-            "style": { "fill": "orange", "stroke": "red" },
+            "definition": "defs/Star.json",
+            "style": { "fill": "yellow", "stroke": "red" },
             "position": {
                 "x": 425, 
                 "y": -150, 
