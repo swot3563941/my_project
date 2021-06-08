@@ -47,3 +47,6 @@ If you want to make the body of bony longer, you can modify the 'config.jason' f
      src="https://github.com/swot3563941/my_project/blob/main/images/escape.png">  
 ## Key challenges
 ## Acknowedges
+-https://github.com/tbonaciUW/EEP_520_Spring2021
+-https://www.w3schools.com/CPP/default.asp
+-http://klavinslab.org/elma/index.html
