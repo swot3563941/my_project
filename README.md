@@ -22,17 +22,17 @@ Then go to http://localhost/ on your browser. You will now see bony wandering ar
 
 ## How to use
 Basically bony can make his way out of the maze, he just needs some time. So you can do nothing but watch how he does it. If you want to participate, you can click the screen, bony will teleport to that location.
-### Advance usage
+#### Advance usage
 If you want to make the body of bony longer, you can modify the 'config.jason' file. You can add the following in the middle of the head and tail.
 ```c++
 {
-            "definition": "defs/Follower.json",
-            "style": { "fill": "red", "stroke": "red" },
-            "position": {
-                "x": 100, 
-                "y": 100, 
-                "theta": 1
-            }
+  "definition": "defs/Follower.json",
+  "style": { "fill": "red", "stroke": "red" },
+  "position": {
+    "x": 100, 
+    "y": 100, 
+    "theta": 1
+  }
 }, 
 ```
 ## Key challenges
