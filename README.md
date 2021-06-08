@@ -53,7 +53,7 @@ There are some key challenges when buliding this project.
 #### The physical dynamics of enviro
 - The enviro tries to mimic the physical dynamic of the real world, however weird things happen when using large or small values. For example, when I tried to set the mass of an object to 0.3, the object started rotating crazily, when I set it to an even smaller value, the enviro started to crash. And it also took a while to figure out a good combination of mass, friction and force, so that Bony can move smoothly. 
 #### The inheritance of classes
-- Most of the classes inherit the 'AgentInterface' class, this makes communication with the enviro simple. But at the same time it adds limitations to what you can do with the enviro.
+- Most of the classes inherit the 'AgentInterface' class, this makes communication with the enviro simple. But at the same time it adds limitations to what you can do with the enviro. So you have to figure out a way to achieve your goal by a limited range of functions.
 
 ## Acknowedges
 #### References
