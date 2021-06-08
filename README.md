@@ -46,6 +46,15 @@ If you want to make the body of bony longer, you can modify the 'config.jason' f
 <img width=90%
      src="https://github.com/swot3563941/my_project/blob/main/images/escape.png">  
 ## Key challenges
+
+There are some key challenges when buliding this project.
+#### Object get stock in places
+- When more and more objects are created in the robot world. They are more likely to squeeze together and stock, since objects are basically moving by simple criteria. So I use the teleport function to solve this. When Bony is moving at a low speed for over a threshold of seconds, he will automatically teleport to a new location. Similarly his body will teleport when they are stock and far from the head.
+#### The physical dynamics of enviro
+- The enviro tries to mimic the physical dynamic of the real world, however weird things happen when using large or small values. For example, when I tried to set the mass of an object to 0.3, the object started rotating crazily, when I set it to an even smaller value, the enviro started to crash. And it also took a while to figure out a good combination of mass, friction and force, so that Bony can move smoothly. 
+#### The inheritance of classes
+- Most of the classes inherit the 'AgentInterface' class, this makes communication with the enviro simple. But at the same time it adds limitations to what you can do with the enviro.
+
 ## Acknowedges
 #### References
 -https://github.com/tbonaciUW/EEP_520_Spring2021  
